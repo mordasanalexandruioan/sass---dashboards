@@ -1,0 +1,21 @@
+.mainHead {
+  position: relative;
+  padding: 1em 0;
+}
+.mainHead span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-left: 0.6em;
+}
+.mainHead input {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 125px);
+  background-color: #f7f7f7;
+  border: solid 2px #dddddd;
+  right: 0;
+  top: 0;
+  border-top: none;
+}
+
+/*# sourceMappingURL=main-head.css.map */

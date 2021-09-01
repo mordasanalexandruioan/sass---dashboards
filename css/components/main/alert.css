@@ -1,0 +1,20 @@
+.alert {
+  display: table;
+  margin: 0 auto 1em auto;
+  background-color: #7476c0;
+  color: white;
+  padding: 0.6em;
+  min-width: 300px;
+  font-weight: 400;
+  border-radius: 0.4em;
+  transition: transform 0.3s;
+}
+.alert span {
+  margin-left: 27px;
+}
+
+.alert.desappear {
+  transform: translateX(-120%);
+}
+
+/*# sourceMappingURL=alert.css.map */
