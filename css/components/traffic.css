@@ -1,4 +1,5 @@
 .traffic {
+  grid-area: traffic;
   padding: 0.5em 0.7em;
 }
 

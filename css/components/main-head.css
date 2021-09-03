@@ -1,4 +1,5 @@
 .mainHead {
+  grid-area: mainHead;
   position: relative;
   padding: 1em 0;
 }

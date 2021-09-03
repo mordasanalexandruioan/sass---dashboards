@@ -1,14 +1,20 @@
-.t-chart {
-  padding: 0.5em 0.7em;
-}
-.t-chart h2 {
-  margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-}
-.t-chart canvas {
-  margin-top: 0.7rem;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 11 | /         @include mq('med') {
+ * 12 | |             max-height: 220px;
+ * 13 | |             min-height: 210px;
+ * 14 | |             margin-top: 1em;
+ * 15 | \         }
+ *    '
+ *   scss\components\t-chart.scss 11:9  root stylesheet */
 
-/*# sourceMappingURL=t-chart.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 11 \2502  \250c          @include mq('med') {\a 12 \2502  \2502              max-height: 220px;\a 13 \2502  \2502              min-height: 210px;\a 14 \2502  \2502              margin-top: 1em;\a 15 \2502  \2514          }\a    \2575 \a   scss\\components\\t-chart.scss 11:9  root stylesheet";
+}

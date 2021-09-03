@@ -12,12 +12,13 @@ body {
 }
 @media (min-width: 320px) {
   body {
-    grid-template-areas: "header" "nav" "main";
+    grid-template-areas: "header" "aside" "main";
   }
 }
 @media (min-width: 768px) {
   body {
     grid-template-columns: 50px 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "header header" "aside main" "aside main";
   }
 }
@@ -362,15 +363,15 @@ template {
 }
 
 header {
-  grid-area: "header";
+  grid-area: header;
 }
 
 aside {
-  grid-area: "aside";
+  grid-area: aside;
 }
 
 main {
-  grid-area: "main";
+  grid-area: main;
   overflow: hidden;
 }
 main section {
@@ -384,6 +385,7 @@ main h2 {
 }
 
 .mainHead {
+  grid-area: mainHead;
   position: relative;
   padding: 1em 0;
 }
@@ -463,14 +465,31 @@ main h2 {
   background-color: #4d4d73;
   padding: 0.5em 0;
 }
+@media (min-width: 768px) {
+  .aside-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+}
 .aside-nav li svg {
   width: 30px;
   height: 30px;
   fill: #fff;
 }
+@media (min-width: 768px) {
+  .aside-nav li svg {
+    margin: 0.3em 0 0.6em;
+  }
+}
 
 .alert {
-  display: table;
+  grid-area: alert;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto 1em auto;
   background-color: #7476c0;
   color: white;
@@ -480,8 +499,10 @@ main h2 {
   border-radius: 0.4em;
   transition: transform 0.3s;
 }
-.alert span {
-  margin-left: 26px;
+@media (min-width: 768px) {
+  .alert {
+    width: 95%;
+  }
 }
 
 .alert.desappear {
@@ -489,6 +510,7 @@ main h2 {
 }
 
 .traffic {
+  grid-area: traffic;
   padding: 0.5em 0.7em;
 }
 
@@ -524,6 +546,18 @@ main h2 {
 .t-chart canvas {
   margin-top: 0.7rem;
 }
+@media (min-width: 768px) {
+  .t-chart canvas {
+    max-height: 220px;
+    min-height: 210px;
+    margin-top: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .t-chart {
+    width: 50%;
+  }
+}
 
 .social-stats {
   padding: 0.5em 0.5em;
@@ -540,6 +574,17 @@ main h2 {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .apps {
+    min-width: 220px;
+  }
+}
+@media (min-width: 1024px) {
+  .apps {
+    min-width: 310px;
+    width: 33%;
+  }
+}
 .apps svg {
   position: absolute;
   top: 17px;
@@ -554,6 +599,17 @@ main h2 {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .apps .social-content {
+    align-self: flex-end;
+    margin-right: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .apps .social-content {
+    align-self: center;
+  }
+}
 .apps .social-content span:nth-child(1) {
   color: #7476c0;
   font-weight: 600;
@@ -565,6 +621,13 @@ main h2 {
 
 .new-members {
   padding: 0.1em 0.7em;
+  grid-area: new-members;
+}
+@media (min-width: 1024px) {
+  .new-members {
+    border-right: solid 1px gray;
+    width: 50%;
+  }
 }
 
 .card {
@@ -577,6 +640,13 @@ main h2 {
   margin-bottom: 0.8em;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 .card img {
   width: 60px;
   height: 60px;
@@ -586,12 +656,26 @@ main h2 {
 .card span {
   font-weight: 400;
 }
-.card span:nth-child(3) {
+.card .member-name-mail span:nth-child(2) {
   color: #7476c0;
+}
+@media (min-width: 768px) {
+  .card .member-name-mail {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0.3em;
+  }
+}
+@media (min-width: 768px) {
+  .card span:nth-child(3) {
+    margin-left: auto;
+  }
 }
 
 .recent-activity {
   padding: 0.1em 0.8em;
+  grid-area: recent-activity;
 }
 
 .recent-activity span.action {
@@ -600,9 +684,24 @@ main h2 {
 .recent-activity .card span:nth-child(3) {
   color: #000;
 }
+@media (min-width: 768px) {
+  .recent-activity .member-activity {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0.3em;
+  }
+}
 
 .message {
   padding: 1em 0.8em;
+  grid-area: message;
+}
+@media (min-width: 1024px) {
+  .message {
+    padding: 0 0.8em;
+    width: 50%;
+  }
 }
 .message h2 {
   margin: 0 0 0.8em;
@@ -625,13 +724,29 @@ main h2 {
   border-radius: 0.3em;
   border: none;
 }
+@media (min-width: 768px) {
+  .message textarea {
+    min-height: 100px;
+  }
+}
 
 .settings {
   padding: 0.1em 0.8em;
 }
+@media (min-width: 1024px) {
+  .settings {
+    width: 50%;
+    border-left: solid 1px #c2c2c2;
+  }
+}
 .settings ul {
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .settings ul {
+    max-width: 300px;
+  }
 }
 .settings ul li {
   width: 100%;
@@ -744,8 +859,52 @@ main h2 {
   border-radius: 0.3em;
   background-color: #bdbdbd;
 }
+@media (min-width: 768px) {
+  .settings-applying button {
+    width: 49%;
+  }
+}
 .settings-applying #save {
   background-color: #7476c0;
+}
+
+@media (min-width: 768px) {
+  .daily-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .apps-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .members {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-interactions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: solid 1px silver;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .user-interactions hr {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
