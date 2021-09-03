@@ -3,7 +3,7 @@
  * 2 |     @include flexy($dir: row, $align: center, $just: space-evenly);
  *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
- *   scss\components\main\traffic-buttons-box.scss 2:5  root stylesheet */
+ *   scss\components\traffic-buttons-box.scss 2:5  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502      @include flexy($dir: row, $align: center, $just: space-evenly);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\components\\main\\traffic-buttons-box.scss 2:5  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502      @include flexy($dir: row, $align: center, $just: space-evenly);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\components\\traffic-buttons-box.scss 2:5  root stylesheet";
 }

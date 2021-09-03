@@ -376,6 +376,32 @@ main {
 main section {
   margin-bottom: 1em;
 }
+main h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.mainHead {
+  position: relative;
+  padding: 1em 0;
+}
+.mainHead span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-left: 0.6em;
+}
+.mainHead input {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 125px);
+  background-color: #f7f7f7;
+  border: solid 2px #dddddd;
+  right: 0;
+  top: 0;
+  border-top: none;
+}
 
 .nav-bar {
   display: flex;
@@ -443,26 +469,6 @@ main section {
   fill: #fff;
 }
 
-.mainHead {
-  position: relative;
-  padding: 1em 0;
-}
-.mainHead span {
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding-left: 0.6em;
-}
-.mainHead input {
-  position: absolute;
-  height: 100%;
-  width: calc(100% - 125px);
-  background-color: #f7f7f7;
-  border: solid 2px #dddddd;
-  right: 0;
-  top: 0;
-  border-top: none;
-}
-
 .alert {
   display: table;
   margin: 0 auto 1em auto;
@@ -475,21 +481,15 @@ main section {
   transition: transform 0.3s;
 }
 .alert span {
-  margin-left: 27px;
+  margin-left: 26px;
 }
 
 .alert.desappear {
-  transform: translateX(-120%);
+  transform: translateX(-190%);
 }
 
 .traffic {
   padding: 0.5em 0.7em;
-}
-.traffic h2 {
-  margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.3rem;
 }
 
 .buttons-box {
@@ -528,12 +528,6 @@ main section {
 .social-stats {
   padding: 0.5em 0.5em;
 }
-.social-stats h2 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 0 0 0.3em;
-}
 
 .apps {
   position: relative;
@@ -567,6 +561,191 @@ main section {
 }
 .apps .social-content span:nth-child(2) {
   font-size: 2.5rem;
+}
+
+.new-members {
+  padding: 0.1em 0.7em;
+}
+
+.card {
+  padding: 0.6em 0.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px #dbdbdb;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.3em;
+}
+.card span {
+  font-weight: 400;
+}
+.card span:nth-child(3) {
+  color: #7476c0;
+}
+
+.recent-activity {
+  padding: 0.1em 0.8em;
+}
+
+.recent-activity span.action {
+  font-weight: 900;
+}
+.recent-activity .card span:nth-child(3) {
+  color: #000;
+}
+
+.message {
+  padding: 1em 0.8em;
+}
+.message h2 {
+  margin: 0 0 0.8em;
+}
+.message input, .message textarea {
+  width: 100%;
+  padding: 0.7em;
+  background-color: whitesmoke;
+  border: solid 3px #efefef;
+  border-radius: 0.3em;
+  margin: 0.4em 0;
+}
+.message button {
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 100%;
+  padding: 0.6em 0.6em 0.4em;
+  color: white;
+  background-color: #7476c0;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.settings {
+  padding: 0.1em 0.8em;
+}
+.settings ul {
+  padding: 0;
+  list-style: none;
+}
+.settings ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 1.6em;
+}
+
+.on-off-buttons {
+  position: relative;
+  padding: 0.3em 0.3em 0.2em;
+  overflow: hidden;
+  width: 80px;
+  border-radius: 1em;
+  border: solid 1px #e4e4e4;
+  text-align: right;
+  font-size: 1rem;
+  transition: background-color 0.5s ease-in-out;
+}
+.on-off-buttons .circle-button {
+  min-width: 20px;
+  height: 20px;
+  background-color: white;
+  border: solid 1px #cecece;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.on-off-buttons span:nth-child(1) {
+  position: absolute;
+  left: 3px;
+}
+
+.on-off-buttons.on {
+  background-color: #7476c0;
+  color: white;
+}
+.on-off-buttons.on .circle-button.on {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: solid 1px #cecece;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: calc(100% - 24px);
+  transition: all 0.5s ease-in-out;
+}
+.on-off-buttons.on span:nth-child(2) {
+  opacity: 0;
+}
+
+.on-off-buttons.off {
+  background-color: #f0f0f0;
+  text-align: right;
+}
+.on-off-buttons.off .circle-button.off {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: solid 1px #cecece;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.on-off-buttons.off span:nth-child(1) {
+  opacity: 0;
+}
+
+.timezone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em 0.3em 0.2em;
+  background-color: whitesmoke;
+  font-weight: 300;
+  color: gray;
+  border-radius: 0.3em;
+  border: solid 3px #efefef;
+  margin: 0.9em 0;
+}
+.timezone i {
+  padding-bottom: 0.3em;
+  color: #7476c0;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 5px #cecece;
+}
+
+.settings-applying {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.settings-applying button {
+  width: 47%;
+  padding: 0.9em 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.3em;
+  background-color: #bdbdbd;
+}
+.settings-applying #save {
+  background-color: #7476c0;
 }
 
 /*# sourceMappingURL=style.css.map */

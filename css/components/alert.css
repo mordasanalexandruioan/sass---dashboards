@@ -10,11 +10,11 @@
   transition: transform 0.3s;
 }
 .alert span {
-  margin-left: 27px;
+  margin-left: 26px;
 }
 
 .alert.desappear {
-  transform: translateX(-120%);
+  transform: translateX(-190%);
 }
 
 /*# sourceMappingURL=alert.css.map */

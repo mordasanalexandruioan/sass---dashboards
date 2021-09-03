@@ -162,3 +162,22 @@ let mbUserChart = new Chart(mobileUsers, {
     data: mbUsersData,
     options: mbUsersOptions
 });
+
+let eventSettings = e => {
+    let obj = e.target;
+    let button = obj.parentNode;
+    let li = button.parentNode;
+    let ul = li.parentNode;
+
+    if (button.className == "on-off-buttons off" || obj.className == "circle-button off" || obj.textContent == "OFF") {
+        button.classList.remove("off");
+        button.classList.add("on");
+        button.children[2].classList.remove("off");
+        button.children[2].classList.add("on");
+    } else if (button.className == "on-off-buttons on" || obj.className == "circle-button on" || obj.textContent == "ON") {
+        button.classList.remove("on");
+        button.classList.add("off");
+        button.children[2].classList.remove("on");
+        button.children[2].classList.add("off");
+    }
+}
